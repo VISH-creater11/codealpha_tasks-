@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Social Media</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<div class="navbar">
+  <h1 align="center" style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 45px;">Social Buzz Board</h1>  
+
+  <!-- Dark mode toggle -->
+  <button onclick="document.body.classList.toggle('dark')" align="center" style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 20px;">>🌙</button>
+
+  <div id="currentUser"></div>
+</div>
+
+<!-- OPTIONAL HERO IMAGE -->
+<img src="chatting.jfif"
+     alt="Like!! Share!! and Subscribe!!"
+     width="100%"
+     height="500">
+
+<div class="container">
+
+  <!-- MESSAGE & NOTIFICATION -->
+  <div id="message"></div>
+  <div id="notification" class="notification"></div>
+
+  <!-- REGISTER CARD -->
+  <div class="card">
+    <h3>Register</h3>
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <input id="userId" placeholder="User ID" readonly>
+
+    <img src="download.jfif"
+         alt="Register Banner"
+         width="100%"
+         height="200">
+  </div>
+
+  <!-- CREATE POST -->
+  <div class="card">
+    <h3>Create Post</h3>
+
+    <textarea id="content"
+              maxlength="400"
+              placeholder="What's on your mind?"></textarea>
+
+    <!-- Character counter (IMPORTANT) -->
+    <small id="charCount">0 / 280</small>
+
+    <button onclick="createPost()">Post</button>
+
+    <img src="imagesss.jpg"
+         alt="Post Banner"
+         width="100%"
+         height="200">
+  </div>
+
+  <!-- POSTS FEED -->
+  <div id="posts"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

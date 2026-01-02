@@ -1,0 +1,150 @@
+/* =========================
+   BASE STYLES (UNCHANGED)
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-image: url("blurred-pink-tones-background_1102-31.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+}
+
+.navbar {
+  background: #ff6fa1;
+  color: white;
+  padding: 20px
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 100px auto;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px;
+}
+
+button {
+  background: #ff6fa1;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.post {
+  background: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.post img {
+  border-radius: 50%;
+}
+
+.actions button {
+  background: #eee;
+  color: black;
+  margin-right: 5px;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff6fa1;
+  color: white;
+  padding: 10px;
+  display: none;
+}
+
+.alert.green {
+  background: #d4edda;
+  padding: 8px;
+}
+
+.alert.red {
+  background: #f8d7da;
+  padding: 8px;
+}
+
+/* =========================
+   NEW ADDITIONS
+========================= */
+
+/* Timestamp */
+.post small {
+  color: #777;
+  font-size: 12px;
+}
+
+/* Character Counter */
+#charCount {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Comment Box */
+.post input {
+  margin-top: 6px;
+  padding: 6px;
+}
+
+/* Action Buttons Hover */
+.actions button:hover {
+  background: #ff6fa1;
+  color: white;
+}
+
+/* DARK MODE */
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark .navbar {
+  background: #222;
+}
+
+.dark .card,
+.dark .post {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark input,
+.dark textarea {
+  background: #333;
+  color: white;
+  border: 1px solid #444;
+}
+
+.dark .actions button {
+  background: #444;
+  color: white;
+}
+
+.dark .notification {
+  background: #444;
+}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Products{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-4">Products</h2>
+
+<form method="GET" class="mb-4 d-flex">
+    <input type="text" name="q" class="form-control me-2"
+           placeholder="Search products..."
+           value="{{ query|default:'' }}">
+    <button class="btn btn-primary">Search</button>
+</form>
+
+<div class="row">
+{% for product in products %}
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+
+      <div class="card-body">
+        <h5 class="card-title">
+          <a href="{% url 'product_detail' product.id %}" class="text-decoration-none">
+            {{ product.name }}
+          </a>
+        </h5>
+
+        <p class="card-text">{{ product.description|truncatewords:15 }}</p>
+        <h6 class="fw-bold">₹{{ product.price }}</h6>
+      </div>
+
+      <div class="card-footer bg-white">
+        <a href="{% url 'add_to_cart' product.id %}" class="btn btn-success w-100">
+          Add to Cart 🛒
+        </a>
+      </div>
+
+    </div>
+  </div>
+{% empty %}
+  <p>No products found.</p>
+{% endfor %}
+</div>
+
+{% endblock %}

@@ -80,7 +80,7 @@ These projects were developed as part of the **CodeAlpha Internship Program**, f
 ---
 
 ## 👨‍💻 Author
-**Vishnu**  
+**VishnuPriya S**  
 Aspiring Software Engineer | Full-Stack & Frontend Developer  
 
 ---
